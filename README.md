@@ -48,10 +48,4 @@ If desired, visualize the results after training with the following additional s
 python VulCNN.py -i ./data/three.pkl
 ```
 
-## Conclusion
 
-By following these steps and referring to the VulCNN project, you will be able to perform data normalization, generate PDGs, and train the Sent2Vec model effectively. For more details and customization, please explore the VulCNN project on GitHub.
-
-## License
-
-This project is licensed under the [License Name](LICENSE).
