@@ -28,35 +28,36 @@ python joern_graph_gen.py  -i ./data/'your dataset'/bins/Vul -o ./data/'your dat
 ```
 
 #### Step 3: modify dot file
-、、、
+```
 python changeline.py 
-、、、
+```
 
 #### Step 4: get a pre-trained word2vec
 ##### step4.1 extract the corpus from the source code files.
-、、、
+```
 python read_file.py
-、、、
+```
 ##### step4.2 you need to use the create_dictionary() function in word2vec.py while commenting out the other functions.
-、、、
+```
 python word2vec.py
-、、、
+```
 
 ##### step 4.3 you need to use the  Word2Vec.load() function in word2vec.py while commenting out the other functions.
-、、、
+```
 python word2vec.py
-、、、
+```
 
 #### Step5: Generate pkl file for each dot file
-、、、
+```
 python pkl.py -i ./data/'your dataset'/pdgs/No-Vul -o ./data/'your dataset'/outputs/No-Vul -c ./data/'your dataset'/No-Vul
 python pkl.py -i ./data/'your dataset'/pdgs/Vul -o ./data/'your dataset'/outputs/Vul -c ./data/'your dataset'/Vul
-、、、
+```
 
 #### Step 6: split train pkl and test pkl
 ```
 python split_train_test.py -i ./data/'your dataset'/pkl/ -o ./data/'you dataset'/pkl
 ```
+
 #### Step 6: train the model
 ```
 # n denotes the number of kfold, i.e., n=10 then the training set and test set are divided according to 9:1 and 10 sets of experiments will be performed
