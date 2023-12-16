@@ -1,0 +1,41 @@
+
+from tools import load_data
+from trainer import CNN_Classifier, single_classifer
+from sklearn.model_selection import train_test_split
+import torch
+import numpy as np
+from image import graph_extraction
+
+def get_kfold_dataframe(pathname, item_num):
+    pathname = pathname + "/" if pathname[-1] != "/" else pathname
+    train_df = load_data(pathname + "train.pkl")[item_num]
+    eval_df = load_data(pathname + "test.pkl")[item_num]
+    return train_df, eval_df
+
+def get_single_pkl(path):
+    data = load_data(path)
+
+    return data
+
+def main():
+    torch.manual_seed(14)
+    np.random.seed(14)
+    hidden_size = 200
+    data_path = 'your pkl path'
+    for item_num in range(k-5):
+        train_df, eval_df = get_kfold_dataframe(pathname=data_path, item_num=item_num)
+    
+    classifier = CNN_Classifier(result_save_path=data_path.replace("pkl", "results"), \
+                                item_num=1, epochs=100, hidden_size=hidden_size)
+    classifier.preparation(
+        x_train=train_df['data'],
+        y_train=train_df['label'],
+        x_valid=eval_df['data'],
+        y_valid=eval_df['label'],
+    )
+    classifier.train()
+    
+
+
+if __name__ == "__main__":
+    main()
