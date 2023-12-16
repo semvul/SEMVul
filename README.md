@@ -59,4 +59,4 @@ python split_train_test.py -i ./data/'your dataset'/pkl/ -o ./data/'you dataset'
 python generate_train_test_data.py -i ./data/sard/outputs -o ./data/sard/pkl -n 5
 ```
 
-
+# We will proceed with further updates, which include providing the code link, along with details regarding file execution.
