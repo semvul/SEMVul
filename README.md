@@ -32,13 +32,17 @@ python joern_graph_gen.py  -i ./data/'your dataset'/bins/Vul -o ./data/'your dat
 python changeline.py 
 、、、
 
-#### Step 4: Get a pre-trained word2vec
-##### step4.1 you need to use the create_dictionary() function in word2vec.py while commenting out the other functions.
+#### Step 4: get a pre-trained word2vec
+##### step4.1 extract the corpus from the source code files.
+、、、
+python read_file.py
+、、、
+##### step4.2 you need to use the create_dictionary() function in word2vec.py while commenting out the other functions.
 、、、
 python word2vec.py
 、、、
 
-##### step 4.2 you need to use the  Word2Vec.load() function in word2vec.py while commenting out the other functions.
+##### step 4.3 you need to use the  Word2Vec.load() function in word2vec.py while commenting out the other functions.
 、、、
 python word2vec.py
 、、、
