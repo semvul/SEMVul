@@ -60,7 +60,6 @@ python split_train_test.py -i ./data/'your dataset'/pkl/ -o ./data/'you dataset'
 
 #### Step 6: train the model
 ```
-# n denotes the number of kfold, i.e., n=10 then the training set and test set are divided according to 9:1 and 10 sets of experiments will be performed
 python main.py
 ```
 
