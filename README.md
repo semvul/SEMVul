@@ -63,4 +63,4 @@ python split_train_test.py -i ./data/'your dataset'/pkl/ -o ./data/'you dataset'
 python main.py
 ```
 
-# We will proceed with further updates, which include providing the code link, along with details regarding file execution.
+# We will proceed with further updates, which include providing datasets link, along with details regarding file execution.
